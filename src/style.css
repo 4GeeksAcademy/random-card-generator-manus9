@@ -1,1 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  background-color: #07855d;
+}
+
+.random-card {
+  height: 500px;
+  background-color: #ededed;
+  border-radius: 20px;
+}
+
+.suit2 {
+  transform: rotate(180deg);
+}
+
+.num {
+  font-size: 90px;
+}
