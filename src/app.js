@@ -38,15 +38,7 @@ window.onload = function() {
   function randomCard() {
     let suit = randomSuit();
     let num = randomNum();
-    if (num >= 2 && num <= 4) {
-      document.querySelector(".suit1").innerHTML = `<span>${num}</span>`;
-      document.querySelector(".suit2").innerHTML = `<span>${num}</span>`;
-      for (let i = 0; i < num; i++) {
-        document.querySelector(
-          ".num1"
-        ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
-      }
-    } else if (num >= 5 && num <= 10) {
+    if (num >= 4 && num <= 10) {
       document.querySelector(".suit1").innerHTML = `<span>${num}</span>`;
       document.querySelector(".suit2").innerHTML = `<span>${num}</span>`;
       for (let j = 0; j < Math.round(num / 2); j++) {
@@ -57,6 +49,14 @@ window.onload = function() {
       for (let k = Math.round(num / 2); k < num; k++) {
         document.querySelector(
           ".num2"
+        ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
+      }
+    } else if (num >= 2 && num <= 3) {
+      document.querySelector(".suit1").innerHTML = `<span>${num}</span>`;
+      document.querySelector(".suit2").innerHTML = `<span>${num}</span>`;
+      for (let i = 0; i < num; i++) {
+        document.querySelector(
+          ".num1"
         ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
       }
     } else {
