@@ -4,7 +4,7 @@ body {
   font-family: "Noto Serif JP", serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 60px;
+  font-size: 65px;
   background-color: #07855d;
 }
 
@@ -16,8 +16,4 @@ body {
 
 .suit2 {
   transform: rotate(180deg);
-}
-
-.num {
-  font-size: 90px;
 }

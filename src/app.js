@@ -30,14 +30,44 @@ window.onload = function() {
     ];
     return nums[Math.floor(Math.random() * nums.length)];
   }
+
   function cardColor(suit) {
     return suit === "♥" || suit === "♦" ? "red" : "black";
   }
 
-  let displaySuit = randomSuit();
+  function randomCard() {
+    let suit = randomSuit();
+    let num = randomNum();
+    if (num >= 2 && num <= 4) {
+      document.querySelector(".suit1").innerHTML = `<span>${num}</span>`;
+      document.querySelector(".suit2").innerHTML = `<span>${num}</span>`;
+      for (let i = 0; i < num; i++) {
+        document.querySelector(
+          ".num1"
+        ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
+      }
+    } else if (num >= 5 && num <= 10) {
+      document.querySelector(".suit1").innerHTML = `<span>${num}</span>`;
+      document.querySelector(".suit2").innerHTML = `<span>${num}</span>`;
+      for (let j = 0; j < Math.round(num / 2); j++) {
+        document.querySelector(
+          ".num1"
+        ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
+      }
+      for (let k = Math.round(num / 2); k < num; k++) {
+        document.querySelector(
+          ".num2"
+        ).innerHTML += `<div class="d-inline m-0 p-0">${suit}</div>`;
+      }
+    } else {
+      document.querySelector(".suit1").innerHTML = `<span>${suit}</span>`;
+      document.querySelector(
+        ".num1"
+      ).innerHTML = `<div class="mx-auto">${num}</div>`;
+      document.querySelector(".suit2").innerHTML = `<span>${suit}</span>`;
+    }
+    document.querySelector(".random-card").style.color = cardColor(suit);
+  }
 
-  document.querySelector(".random-card").style.color = cardColor(displaySuit);
-  document.querySelector(".suit1").innerHTML = displaySuit;
-  document.querySelector(".num").innerHTML = randomNum();
-  document.querySelector(".suit2").innerHTML = displaySuit;
+  randomCard();
 };
