@@ -4,16 +4,23 @@ body {
   font-family: "Noto Serif JP", serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 60px;
+
   background-color: #07855d;
 }
 
+.suit-cont {
+  font-size: 50px;
+}
 .random-card {
   height: 500px;
   background-color: #ededed;
   border-radius: 20px;
 }
 
+.suit1 {
+  font-size: 30px;
+}
 .suit2 {
+  font-size: 30px;
   transform: rotate(180deg);
 }
